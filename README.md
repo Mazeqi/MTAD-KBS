@@ -41,4 +41,4 @@ keywords = {Mamba, Transformer, Multi-class, Anomaly detection}
 
 ## Acknowledgements
 
-We thank the great works [ADer](https://github.com/zhangzjn/ADer), [MambaAD](https://github.com/lewandofskee/MambaAD), [VMamba](https://github.com/MzeroMiko/VMamba) [Vim](https://github.com/hustvl/Vim.git) for providing assistance for our research.
+We thank the great works [ADer](https://github.com/zhangzjn/ADer), [MambaAD](https://github.com/lewandofskee/MambaAD), [VMamba](https://github.com/MzeroMiko/VMamba), [Vim](https://github.com/hustvl/Vim.git) for providing assistance for our research.
