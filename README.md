@@ -2,7 +2,7 @@
 
 ## Integrating Local and Global Correlations with Mamba-Transformer for Multi-Class Anomaly Detection
 
-The official code of the paper " *Integrating Local and Global Correlations with Mamba-Transformer for Multi-Class Anomaly Detection*", which is accepted by "Knowledge-based Systems".
+The official code of the paper " *Integrating Local and Global Correlations with Mamba-Transformer for Multi-Class Anomaly Detection*", which is accepted by "Knowledge-based Systems". [MTAD](https://doi.org/10.1016/j.knosys.2025.113740)
 
 
 
