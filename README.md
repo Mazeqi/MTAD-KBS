@@ -20,7 +20,7 @@ Unsupervised anomaly detection (UAD) tasks play a vital role in detecting anomal
 
 - Clone this repo to [ADer](https://github.com/zhangzjn/ADer).
 
-- `conda install -c conda-forge accimage -y && conda install -c conda-forge faiss-cpu -y &&apt-get update&&apt-get install ffmpeg libsm6 libxext6 -y&& apt-get install libgl1 -y  && pip install -r requirements.txt &&python -c "from opencv_fixer import AutoFix; AutoFix()" && cd dis_causal_conv1d && pip install -e . && cd .. &&cd dis_mamba && pip install -e . && cd ..  && CUDA_VISIBLE_DEVICES=0 python run.py -c configs/tmad/tmad_256_500e_mvtec.py -m train`
+- `conda install -c conda-forge accimage -y && conda install -c conda-forge faiss-cpu -y &&apt-get update&&apt-get install ffmpeg libsm6 libxext6 -y&& apt-get install libgl1 -y  && pip install -r requirements.txt &&python -c "from opencv_fixer import AutoFix; AutoFix()" &&cd dis_mamba && pip install -e . && cd ..  && CUDA_VISIBLE_DEVICES=0 python run.py -c configs/tmad/tmad_256_500e_mvtec.py -m train`
 
 ## Citation
 
