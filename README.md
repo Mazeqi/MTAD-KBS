@@ -34,7 +34,10 @@ doi = {https://doi.org/10.1016/j.knosys.2025.113740},
 url = {https://www.sciencedirect.com/science/article/pii/S0950705125007865},
 author = {Zeqi Ma and Jiaxing Li and Kaihang Jiang and Wai Keung Wong},
 keywords = {Mamba, Transformer, Multi-class, Anomaly detection}
-}```
+}
+```
+
+
 
 ## Acknowledgements
 
