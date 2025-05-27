@@ -1,4 +1,7 @@
 # MTAD-KBS
+
+## Integrating Local and Global Correlations with Mamba-Transformer for Multi-Class Anomaly Detection
+
 The official code of the paper " *Integrating Local and Global Correlations with Mamba-Transformer for Multi-Class Anomaly Detection*", which is accepted by "Knowledge-based Systems".
 
 
