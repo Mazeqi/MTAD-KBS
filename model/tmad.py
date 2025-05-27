@@ -926,15 +926,6 @@ class MambaAttBlock(nn.Module):
                     ):
         super().__init__()
         self.norm_att_1 = norm_layer(dim)
-        # self.attn = Attention(
-        #     dim,
-        #     num_heads=num_heads,
-        #     qkv_bias=qkv_bias,
-        #     qk_norm=qk_scale,
-        #     attn_drop=attn_drop,
-        #     proj_drop=drop,
-        #     norm_layer=norm_layer,
-        # )
         att_mode = att_mode
         if att_mode == "linear":
             self.attn = LinearAttention(dim, num_heads=num_heads, qkv_bias=True)
@@ -969,24 +960,6 @@ class MambaAttBlock(nn.Module):
             **block_kwargs,
             **factory_kwargs,
         )
-
-        # self.mixer = MambaVisionMixer(d_model=dim, 
-        #                                 d_state=8,  
-        #                                 d_conv=3,    
-        #                                 expand=1,
-        #                                 layer_idx=layer_idx,
-        #                                 scan_type=scan_type,
-        #                                 **block_kwargs,
-        #                                 **factory_kwargs,
-        #                                 )
-        
-
-        # self.mixer = SS2D(d_model=dim, 
-        #                     d_state=8,  
-        #                     d_conv=3,    
-        #                     expand=1,
-        #                     size=size
-        #                     )
 
         self.norm_mixer_2 = norm_layer(dim)
         self.mlp_mixer = Mlp_block(in_features=dim, hidden_features=mlp_hidden_dim, act_layer=act_layer, drop=drop)
