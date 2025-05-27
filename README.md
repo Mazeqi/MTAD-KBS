@@ -1,5 +1,5 @@
 # MTAD-KBS
-The official code of the paper " *Integrating Local and Global Correlations with Mamba-Transformer for Multi-Class Anomaly Detection*", which is accepted by "Knowledge-based System".
+The official code of the paper " *Integrating Local and Global Correlations with Mamba-Transformer for Multi-Class Anomaly Detection*", which is accepted by "Knowledge-based Systems".
 
 
 
@@ -24,8 +24,17 @@ Unsupervised anomaly detection (UAD) tasks play a vital role in detecting anomal
 If you find this code useful, don't forget to star the repo and cite the paper:
 
 ```
-Coming Soon
-```
+@article{MA2025113740,
+title = {Integrating local and global correlations with Mamba-Transformer for multi-class anomaly detection},
+journal = {Knowledge-Based Systems},
+pages = {113740},
+year = {2025},
+issn = {0950-7051},
+doi = {https://doi.org/10.1016/j.knosys.2025.113740},
+url = {https://www.sciencedirect.com/science/article/pii/S0950705125007865},
+author = {Zeqi Ma and Jiaxing Li and Kaihang Jiang and Wai Keung Wong},
+keywords = {Mamba, Transformer, Multi-class, Anomaly detection}
+}```
 
 ## Acknowledgements
 
