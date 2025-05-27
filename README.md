@@ -24,7 +24,7 @@ Unsupervised anomaly detection (UAD) tasks play a vital role in detecting anomal
 If you find this code useful, don't forget to star the repo and cite the paper:
 
 ```
-
+Coming Soon
 ```
 
 ## Acknowledgements
