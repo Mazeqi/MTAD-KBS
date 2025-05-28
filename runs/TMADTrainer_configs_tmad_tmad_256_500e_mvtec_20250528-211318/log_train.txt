@@ -1,0 +1,481 @@
+2025-05-28 21:13:18,271 - ==> Logging on master GPU: 0
+2025-05-28 21:13:18,271 - ==> Running Trainer: TMADTrainer
+2025-05-28 21:13:18,271 - ==> Using GPU: [0] for Training
+2025-05-28 21:13:18,271 - ==> Building model
+2025-05-28 21:13:18,499 - Loading pretrained weights from Hugging Face hub (timm/resnet34.a1_in1k)
+2025-05-28 21:13:18,774 - [timm/resnet34.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-05-28 21:13:23,675 - 
+------------------------------------ TMAD ------------------------------------
+| module                                                       | #parameters or shape   | #flops       |
+|:-------------------------------------------------------------|:-----------------------|:-------------|
+| model                                                        | 42.594M                | 14.544G      |
+|  net_t                                                       |  8.17M                 |  3.955G      |
+|   net_t.conv1                                                |   9.408K               |   0.154G     |
+|    net_t.conv1.weight                                        |    (64, 3, 7, 7)       |              |
+|   net_t.bn1                                                  |   0.128K               |   2.097M     |
+|    net_t.bn1.weight                                          |    (64,)               |              |
+|    net_t.bn1.bias                                            |    (64,)               |              |
+|   net_t.layer1                                               |   0.222M               |   0.909G     |
+|    net_t.layer1.0                                            |    73.984K             |    0.303G    |
+|     net_t.layer1.0.conv1                                     |     36.864K            |     0.151G   |
+|      net_t.layer1.0.conv1.weight                             |      (64, 64, 3, 3)    |              |
+|     net_t.layer1.0.bn1                                       |     0.128K             |     0.524M   |
+|      net_t.layer1.0.bn1.weight                               |      (64,)             |              |
+|      net_t.layer1.0.bn1.bias                                 |      (64,)             |              |
+|     net_t.layer1.0.conv2                                     |     36.864K            |     0.151G   |
+|      net_t.layer1.0.conv2.weight                             |      (64, 64, 3, 3)    |              |
+|     net_t.layer1.0.bn2                                       |     0.128K             |     0.524M   |
+|      net_t.layer1.0.bn2.weight                               |      (64,)             |              |
+|      net_t.layer1.0.bn2.bias                                 |      (64,)             |              |
+|    net_t.layer1.1                                            |    73.984K             |    0.303G    |
+|     net_t.layer1.1.conv1                                     |     36.864K            |     0.151G   |
+|      net_t.layer1.1.conv1.weight                             |      (64, 64, 3, 3)    |              |
+|     net_t.layer1.1.bn1                                       |     0.128K             |     0.524M   |
+|      net_t.layer1.1.bn1.weight                               |      (64,)             |              |
+|      net_t.layer1.1.bn1.bias                                 |      (64,)             |              |
+|     net_t.layer1.1.conv2                                     |     36.864K            |     0.151G   |
+|      net_t.layer1.1.conv2.weight                             |      (64, 64, 3, 3)    |              |
+|     net_t.layer1.1.bn2                                       |     0.128K             |     0.524M   |
+|      net_t.layer1.1.bn2.weight                               |      (64,)             |              |
+|      net_t.layer1.1.bn2.bias                                 |      (64,)             |              |
+|    net_t.layer1.2                                            |    73.984K             |    0.303G    |
+|     net_t.layer1.2.conv1                                     |     36.864K            |     0.151G   |
+|      net_t.layer1.2.conv1.weight                             |      (64, 64, 3, 3)    |              |
+|     net_t.layer1.2.bn1                                       |     0.128K             |     0.524M   |
+|      net_t.layer1.2.bn1.weight                               |      (64,)             |              |
+|      net_t.layer1.2.bn1.bias                                 |      (64,)             |              |
+|     net_t.layer1.2.conv2                                     |     36.864K            |     0.151G   |
+|      net_t.layer1.2.conv2.weight                             |      (64, 64, 3, 3)    |              |
+|     net_t.layer1.2.bn2                                       |     0.128K             |     0.524M   |
+|      net_t.layer1.2.bn2.weight                               |      (64,)             |              |
+|      net_t.layer1.2.bn2.bias                                 |      (64,)             |              |
+|   net_t.layer2                                               |   1.116M               |   1.143G     |
+|    net_t.layer2.0                                            |    0.23M               |    0.236G    |
+|     net_t.layer2.0.conv1                                     |     73.728K            |     75.497M  |
+|      net_t.layer2.0.conv1.weight                             |      (128, 64, 3, 3)   |              |
+|     net_t.layer2.0.bn1                                       |     0.256K             |     0.262M   |
+|      net_t.layer2.0.bn1.weight                               |      (128,)            |              |
+|      net_t.layer2.0.bn1.bias                                 |      (128,)            |              |
+|     net_t.layer2.0.conv2                                     |     0.147M             |     0.151G   |
+|      net_t.layer2.0.conv2.weight                             |      (128, 128, 3, 3)  |              |
+|     net_t.layer2.0.bn2                                       |     0.256K             |     0.262M   |
+|      net_t.layer2.0.bn2.weight                               |      (128,)            |              |
+|      net_t.layer2.0.bn2.bias                                 |      (128,)            |              |
+|     net_t.layer2.0.downsample                                |     8.448K             |     8.651M   |
+|      net_t.layer2.0.downsample.0                             |      8.192K            |      8.389M  |
+|      net_t.layer2.0.downsample.1                             |      0.256K            |      0.262M  |
+|    net_t.layer2.1                                            |    0.295M              |    0.303G    |
+|     net_t.layer2.1.conv1                                     |     0.147M             |     0.151G   |
+|      net_t.layer2.1.conv1.weight                             |      (128, 128, 3, 3)  |              |
+|     net_t.layer2.1.bn1                                       |     0.256K             |     0.262M   |
+|      net_t.layer2.1.bn1.weight                               |      (128,)            |              |
+|      net_t.layer2.1.bn1.bias                                 |      (128,)            |              |
+|     net_t.layer2.1.conv2                                     |     0.147M             |     0.151G   |
+|      net_t.layer2.1.conv2.weight                             |      (128, 128, 3, 3)  |              |
+|     net_t.layer2.1.bn2                                       |     0.256K             |     0.262M   |
+|      net_t.layer2.1.bn2.weight                               |      (128,)            |              |
+|      net_t.layer2.1.bn2.bias                                 |      (128,)            |              |
+|    net_t.layer2.2                                            |    0.295M              |    0.303G    |
+|     net_t.layer2.2.conv1                                     |     0.147M             |     0.151G   |
+|      net_t.layer2.2.conv1.weight                             |      (128, 128, 3, 3)  |              |
+|     net_t.layer2.2.bn1                                       |     0.256K             |     0.262M   |
+|      net_t.layer2.2.bn1.weight                               |      (128,)            |              |
+|      net_t.layer2.2.bn1.bias                                 |      (128,)            |              |
+|     net_t.layer2.2.conv2                                     |     0.147M             |     0.151G   |
+|      net_t.layer2.2.conv2.weight                             |      (128, 128, 3, 3)  |              |
+|     net_t.layer2.2.bn2                                       |     0.256K             |     0.262M   |
+|      net_t.layer2.2.bn2.weight                               |      (128,)            |              |
+|      net_t.layer2.2.bn2.bias                                 |      (128,)            |              |
+|    net_t.layer2.3                                            |    0.295M              |    0.303G    |
+|     net_t.layer2.3.conv1                                     |     0.147M             |     0.151G   |
+|      net_t.layer2.3.conv1.weight                             |      (128, 128, 3, 3)  |              |
+|     net_t.layer2.3.bn1                                       |     0.256K             |     0.262M   |
+|      net_t.layer2.3.bn1.weight                               |      (128,)            |              |
+|      net_t.layer2.3.bn1.bias                                 |      (128,)            |              |
+|     net_t.layer2.3.conv2                                     |     0.147M             |     0.151G   |
+|      net_t.layer2.3.conv2.weight                             |      (128, 128, 3, 3)  |              |
+|     net_t.layer2.3.bn2                                       |     0.256K             |     0.262M   |
+|      net_t.layer2.3.bn2.weight                               |      (128,)            |              |
+|      net_t.layer2.3.bn2.bias                                 |      (128,)            |              |
+|   net_t.layer3                                               |   6.822M               |   1.747G     |
+|    net_t.layer3.0                                            |    0.919M              |    0.235G    |
+|     net_t.layer3.0.conv1                                     |     0.295M             |     75.497M  |
+|      net_t.layer3.0.conv1.weight                             |      (256, 128, 3, 3)  |              |
+|     net_t.layer3.0.bn1                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.0.bn1.weight                               |      (256,)            |              |
+|      net_t.layer3.0.bn1.bias                                 |      (256,)            |              |
+|     net_t.layer3.0.conv2                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.0.conv2.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.0.bn2                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.0.bn2.weight                               |      (256,)            |              |
+|      net_t.layer3.0.bn2.bias                                 |      (256,)            |              |
+|     net_t.layer3.0.downsample                                |     33.28K             |     8.52M    |
+|      net_t.layer3.0.downsample.0                             |      32.768K           |      8.389M  |
+|      net_t.layer3.0.downsample.1                             |      0.512K            |      0.131M  |
+|    net_t.layer3.1                                            |    1.181M              |    0.302G    |
+|     net_t.layer3.1.conv1                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.1.conv1.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.1.bn1                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.1.bn1.weight                               |      (256,)            |              |
+|      net_t.layer3.1.bn1.bias                                 |      (256,)            |              |
+|     net_t.layer3.1.conv2                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.1.conv2.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.1.bn2                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.1.bn2.weight                               |      (256,)            |              |
+|      net_t.layer3.1.bn2.bias                                 |      (256,)            |              |
+|    net_t.layer3.2                                            |    1.181M              |    0.302G    |
+|     net_t.layer3.2.conv1                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.2.conv1.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.2.bn1                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.2.bn1.weight                               |      (256,)            |              |
+|      net_t.layer3.2.bn1.bias                                 |      (256,)            |              |
+|     net_t.layer3.2.conv2                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.2.conv2.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.2.bn2                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.2.bn2.weight                               |      (256,)            |              |
+|      net_t.layer3.2.bn2.bias                                 |      (256,)            |              |
+|    net_t.layer3.3                                            |    1.181M              |    0.302G    |
+|     net_t.layer3.3.conv1                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.3.conv1.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.3.bn1                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.3.bn1.weight                               |      (256,)            |              |
+|      net_t.layer3.3.bn1.bias                                 |      (256,)            |              |
+|     net_t.layer3.3.conv2                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.3.conv2.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.3.bn2                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.3.bn2.weight                               |      (256,)            |              |
+|      net_t.layer3.3.bn2.bias                                 |      (256,)            |              |
+|    net_t.layer3.4                                            |    1.181M              |    0.302G    |
+|     net_t.layer3.4.conv1                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.4.conv1.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.4.bn1                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.4.bn1.weight                               |      (256,)            |              |
+|      net_t.layer3.4.bn1.bias                                 |      (256,)            |              |
+|     net_t.layer3.4.conv2                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.4.conv2.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.4.bn2                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.4.bn2.weight                               |      (256,)            |              |
+|      net_t.layer3.4.bn2.bias                                 |      (256,)            |              |
+|    net_t.layer3.5                                            |    1.181M              |    0.302G    |
+|     net_t.layer3.5.conv1                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.5.conv1.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.5.bn1                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.5.bn1.weight                               |      (256,)            |              |
+|      net_t.layer3.5.bn1.bias                                 |      (256,)            |              |
+|     net_t.layer3.5.conv2                                     |     0.59M              |     0.151G   |
+|      net_t.layer3.5.conv2.weight                             |      (256, 256, 3, 3)  |              |
+|     net_t.layer3.5.bn2                                       |     0.512K             |     0.131M   |
+|      net_t.layer3.5.bn2.weight                               |      (256,)            |              |
+|      net_t.layer3.5.bn2.bias                                 |      (256,)            |              |
+|  fpn                                                         |  1.458M                |  0.269G      |
+|   fpn.bn_layer                                               |   0.94M                |   66.47M     |
+|    fpn.bn_layer.0                                            |    0.379M              |    30.622M   |
+|     fpn.bn_layer.0.conv1                                     |     32.768K            |     8.389M   |
+|      fpn.bn_layer.0.conv1.weight                             |      (128, 256, 1, 1)  |              |
+|     fpn.bn_layer.0.bn1                                       |     0.256K             |     65.536K  |
+|      fpn.bn_layer.0.bn1.weight                               |      (128,)            |              |
+|      fpn.bn_layer.0.bn1.bias                                 |      (128,)            |              |
+|     fpn.bn_layer.0.conv2                                     |     0.147M             |     9.437M   |
+|      fpn.bn_layer.0.conv2.weight                             |      (128, 128, 3, 3)  |              |
+|     fpn.bn_layer.0.bn2                                       |     0.256K             |     16.384K  |
+|      fpn.bn_layer.0.bn2.weight                               |      (128,)            |              |
+|      fpn.bn_layer.0.bn2.bias                                 |      (128,)            |              |
+|     fpn.bn_layer.0.conv3                                     |     65.536K            |     4.194M   |
+|      fpn.bn_layer.0.conv3.weight                             |      (512, 128, 1, 1)  |              |
+|     fpn.bn_layer.0.bn3                                       |     1.024K             |     65.536K  |
+|      fpn.bn_layer.0.bn3.weight                               |      (512,)            |              |
+|      fpn.bn_layer.0.bn3.bias                                 |      (512,)            |              |
+|     fpn.bn_layer.0.downsample                                |     0.132M             |     8.454M   |
+|      fpn.bn_layer.0.downsample.0                             |      0.131M            |      8.389M  |
+|      fpn.bn_layer.0.downsample.1                             |      1.024K            |      65.536K |
+|    fpn.bn_layer.1                                            |    0.28M               |    17.924M   |
+|     fpn.bn_layer.1.conv1                                     |     65.536K            |     4.194M   |
+|      fpn.bn_layer.1.conv1.weight                             |      (128, 512, 1, 1)  |              |
+|     fpn.bn_layer.1.bn1                                       |     0.256K             |     16.384K  |
+|      fpn.bn_layer.1.bn1.weight                               |      (128,)            |              |
+|      fpn.bn_layer.1.bn1.bias                                 |      (128,)            |              |
+|     fpn.bn_layer.1.conv2                                     |     0.147M             |     9.437M   |
+|      fpn.bn_layer.1.conv2.weight                             |      (128, 128, 3, 3)  |              |
+|     fpn.bn_layer.1.bn2                                       |     0.256K             |     16.384K  |
+|      fpn.bn_layer.1.bn2.weight                               |      (128,)            |              |
+|      fpn.bn_layer.1.bn2.bias                                 |      (128,)            |              |
+|     fpn.bn_layer.1.conv3                                     |     65.536K            |     4.194M   |
+|      fpn.bn_layer.1.conv3.weight                             |      (512, 128, 1, 1)  |              |
+|     fpn.bn_layer.1.bn3                                       |     1.024K             |     65.536K  |
+|      fpn.bn_layer.1.bn3.weight                               |      (512,)            |              |
+|      fpn.bn_layer.1.bn3.bias                                 |      (512,)            |              |
+|    fpn.bn_layer.2                                            |    0.28M               |    17.924M   |
+|     fpn.bn_layer.2.conv1                                     |     65.536K            |     4.194M   |
+|      fpn.bn_layer.2.conv1.weight                             |      (128, 512, 1, 1)  |              |
+|     fpn.bn_layer.2.bn1                                       |     0.256K             |     16.384K  |
+|      fpn.bn_layer.2.bn1.weight                               |      (128,)            |              |
+|      fpn.bn_layer.2.bn1.bias                                 |      (128,)            |              |
+|     fpn.bn_layer.2.conv2                                     |     0.147M             |     9.437M   |
+|      fpn.bn_layer.2.conv2.weight                             |      (128, 128, 3, 3)  |              |
+|     fpn.bn_layer.2.bn2                                       |     0.256K             |     16.384K  |
+|      fpn.bn_layer.2.bn2.weight                               |      (128,)            |              |
+|      fpn.bn_layer.2.bn2.bias                                 |      (128,)            |              |
+|     fpn.bn_layer.2.conv3                                     |     65.536K            |     4.194M   |
+|      fpn.bn_layer.2.conv3.weight                             |      (512, 128, 1, 1)  |              |
+|     fpn.bn_layer.2.bn3                                       |     1.024K             |     65.536K  |
+|      fpn.bn_layer.2.bn3.weight                               |      (512,)            |              |
+|      fpn.bn_layer.2.bn3.bias                                 |      (512,)            |              |
+|   fpn.conv1                                                  |   73.728K              |   75.497M    |
+|    fpn.conv1.weight                                          |    (128, 64, 3, 3)     |              |
+|   fpn.bn1                                                    |   0.256K               |   0.262M     |
+|    fpn.bn1.weight                                            |    (128,)              |              |
+|    fpn.bn1.bias                                              |    (128,)              |              |
+|   fpn.conv2                                                  |   0.295M               |   75.497M    |
+|    fpn.conv2.weight                                          |    (256, 128, 3, 3)    |              |
+|   fpn.bn2                                                    |   0.512K               |   0.131M     |
+|    fpn.bn2.weight                                            |    (256,)              |              |
+|    fpn.bn2.bias                                              |    (256,)              |              |
+|   fpn.conv21                                                 |   16.512K              |   16.777M    |
+|    fpn.conv21.weight                                         |    (128, 128, 1, 1)    |              |
+|    fpn.conv21.bias                                           |    (128,)              |              |
+|   fpn.bn21                                                   |   0.256K               |   0.262M     |
+|    fpn.bn21.weight                                           |    (128,)              |              |
+|    fpn.bn21.bias                                             |    (128,)              |              |
+|   fpn.conv31                                                 |   65.792K              |   16.777M    |
+|    fpn.conv31.weight                                         |    (256, 256, 1, 1)    |              |
+|    fpn.conv31.bias                                           |    (256,)              |              |
+|   fpn.bn31                                                   |   0.512K               |   0.131M     |
+|    fpn.bn31.weight                                           |    (256,)              |              |
+|    fpn.bn31.bias                                             |    (256,)              |              |
+|   fpn.convf                                                  |   65.792K              |   16.777M    |
+|    fpn.convf.weight                                          |    (256, 256, 1, 1)    |              |
+|    fpn.convf.bias                                            |    (256,)              |              |
+|   fpn.bnf                                                    |   0.512K               |   0.131M     |
+|    fpn.bnf.weight                                            |    (256,)              |              |
+|    fpn.bnf.bias                                              |    (256,)              |              |
+|  net_s.levels                                                |  32.965M               |  10.321G     |
+|   net_s.levels.0.blocks                                      |   20.234M              |   4.589G     |
+|    net_s.levels.0.blocks.0                                   |    6.745M              |    1.53G     |
+|     net_s.levels.0.blocks.0.pos_embed                        |     (1, 256, 512)      |              |
+|     net_s.levels.0.blocks.0.mamba_att_blocks.0               |     6.089M             |     1.496G   |
+|      net_s.levels.0.blocks.0.mamba_att_blocks.0.norm_att_1   |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.0.mamba_att_blocks.0.attn         |      1.051M            |      0.285G  |
+|      net_s.levels.0.blocks.0.mamba_att_blocks.0.norm_att_2   |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.0.mamba_att_blocks.0.mlp_att      |      2.1M              |      0.537G  |
+|      net_s.levels.0.blocks.0.mamba_att_blocks.0.norm_mixer_1 |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.0.mamba_att_blocks.0.mixer        |      0.835M            |      0.134G  |
+|      net_s.levels.0.blocks.0.mamba_att_blocks.0.norm_mixer_2 |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.0.mamba_att_blocks.0.mlp_mixer    |      2.1M              |      0.537G  |
+|     net_s.levels.0.blocks.0.finalconv11                      |     0.525M             |     33.554M  |
+|      net_s.levels.0.blocks.0.finalconv11.weight              |      (512, 1024, 1, 1) |              |
+|      net_s.levels.0.blocks.0.finalconv11.bias                |      (512,)            |              |
+|    net_s.levels.0.blocks.1                                   |    6.745M              |    1.53G     |
+|     net_s.levels.0.blocks.1.pos_embed                        |     (1, 256, 512)      |              |
+|     net_s.levels.0.blocks.1.mamba_att_blocks.0               |     6.089M             |     1.496G   |
+|      net_s.levels.0.blocks.1.mamba_att_blocks.0.norm_att_1   |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.1.mamba_att_blocks.0.attn         |      1.051M            |      0.285G  |
+|      net_s.levels.0.blocks.1.mamba_att_blocks.0.norm_att_2   |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.1.mamba_att_blocks.0.mlp_att      |      2.1M              |      0.537G  |
+|      net_s.levels.0.blocks.1.mamba_att_blocks.0.norm_mixer_1 |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.1.mamba_att_blocks.0.mixer        |      0.835M            |      0.134G  |
+|      net_s.levels.0.blocks.1.mamba_att_blocks.0.norm_mixer_2 |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.1.mamba_att_blocks.0.mlp_mixer    |      2.1M              |      0.537G  |
+|     net_s.levels.0.blocks.1.finalconv11                      |     0.525M             |     33.554M  |
+|      net_s.levels.0.blocks.1.finalconv11.weight              |      (512, 1024, 1, 1) |              |
+|      net_s.levels.0.blocks.1.finalconv11.bias                |      (512,)            |              |
+|    net_s.levels.0.blocks.2                                   |    6.745M              |    1.53G     |
+|     net_s.levels.0.blocks.2.pos_embed                        |     (1, 256, 512)      |              |
+|     net_s.levels.0.blocks.2.mamba_att_blocks.0               |     6.089M             |     1.496G   |
+|      net_s.levels.0.blocks.2.mamba_att_blocks.0.norm_att_1   |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.2.mamba_att_blocks.0.attn         |      1.051M            |      0.285G  |
+|      net_s.levels.0.blocks.2.mamba_att_blocks.0.norm_att_2   |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.2.mamba_att_blocks.0.mlp_att      |      2.1M              |      0.537G  |
+|      net_s.levels.0.blocks.2.mamba_att_blocks.0.norm_mixer_1 |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.2.mamba_att_blocks.0.mixer        |      0.835M            |      0.134G  |
+|      net_s.levels.0.blocks.2.mamba_att_blocks.0.norm_mixer_2 |      1.024K            |      0.655M  |
+|      net_s.levels.0.blocks.2.mamba_att_blocks.0.mlp_mixer    |      2.1M              |      0.537G  |
+|     net_s.levels.0.blocks.2.finalconv11                      |     0.525M             |     33.554M  |
+|      net_s.levels.0.blocks.2.finalconv11.weight              |      (512, 1024, 1, 1) |              |
+|      net_s.levels.0.blocks.2.finalconv11.bias                |      (512,)            |              |
+|   net_s.levels.1                                             |   9M                   |   1.767G     |
+|    net_s.levels.1.blocks                                     |    6.903M              |    1.633G    |
+|     net_s.levels.1.blocks.0                                  |     1.726M             |     0.408G   |
+|      net_s.levels.1.blocks.0.pos_embed                       |      (1, 256, 256)     |              |
+|      net_s.levels.1.blocks.0.mamba_att_blocks.0              |      1.529M            |      0.375G  |
+|      net_s.levels.1.blocks.0.finalconv11                     |      0.131M            |      33.554M |
+|     net_s.levels.1.blocks.1                                  |     1.726M             |     0.408G   |
+|      net_s.levels.1.blocks.1.pos_embed                       |      (1, 256, 256)     |              |
+|      net_s.levels.1.blocks.1.mamba_att_blocks.0              |      1.529M            |      0.375G  |
+|      net_s.levels.1.blocks.1.finalconv11                     |      0.131M            |      33.554M |
+|     net_s.levels.1.blocks.2                                  |     1.726M             |     0.408G   |
+|      net_s.levels.1.blocks.2.pos_embed                       |      (1, 256, 256)     |              |
+|      net_s.levels.1.blocks.2.mamba_att_blocks.0              |      1.529M            |      0.375G  |
+|      net_s.levels.1.blocks.2.finalconv11                     |      0.131M            |      33.554M |
+|     net_s.levels.1.blocks.3                                  |     1.726M             |     0.408G   |
+|      net_s.levels.1.blocks.3.pos_embed                       |      (1, 256, 256)     |              |
+|      net_s.levels.1.blocks.3.mamba_att_blocks.0              |      1.529M            |      0.375G  |
+|      net_s.levels.1.blocks.3.finalconv11                     |      0.131M            |      33.554M |
+|    net_s.levels.1.upsample.upsample                          |    2.098M              |    0.134G    |
+|     net_s.levels.1.upsample.upsample.0                       |     2.097M             |     0.134G   |
+|      net_s.levels.1.upsample.upsample.0.weight               |      (512, 256, 4, 4)  |              |
+|     net_s.levels.1.upsample.upsample.1                       |     0.512K             |     0.131M   |
+|      net_s.levels.1.upsample.upsample.1.weight               |      (256,)            |              |
+|      net_s.levels.1.upsample.upsample.1.bias                 |      (256,)            |              |
+|   net_s.levels.2                                             |   3.232M               |   2.592G     |
+|    net_s.levels.2.blocks                                     |    2.707M              |    2.458G    |
+|     net_s.levels.2.blocks.0                                  |     0.451M             |     0.41G    |
+|      net_s.levels.2.blocks.0.pos_embed                       |      (1, 256, 128)     |              |
+|      net_s.levels.2.blocks.0.mamba_att_blocks.0              |      0.386M            |      0.376G  |
+|      net_s.levels.2.blocks.0.finalconv11                     |      32.896K           |      33.554M |
+|     net_s.levels.2.blocks.1                                  |     0.451M             |     0.41G    |
+|      net_s.levels.2.blocks.1.pos_embed                       |      (1, 256, 128)     |              |
+|      net_s.levels.2.blocks.1.mamba_att_blocks.0              |      0.386M            |      0.376G  |
+|      net_s.levels.2.blocks.1.finalconv11                     |      32.896K           |      33.554M |
+|     net_s.levels.2.blocks.2                                  |     0.451M             |     0.41G    |
+|      net_s.levels.2.blocks.2.pos_embed                       |      (1, 256, 128)     |              |
+|      net_s.levels.2.blocks.2.mamba_att_blocks.0              |      0.386M            |      0.376G  |
+|      net_s.levels.2.blocks.2.finalconv11                     |      32.896K           |      33.554M |
+|     net_s.levels.2.blocks.3                                  |     0.451M             |     0.41G    |
+|      net_s.levels.2.blocks.3.pos_embed                       |      (1, 256, 128)     |              |
+|      net_s.levels.2.blocks.3.mamba_att_blocks.0              |      0.386M            |      0.376G  |
+|      net_s.levels.2.blocks.3.finalconv11                     |      32.896K           |      33.554M |
+|     net_s.levels.2.blocks.4                                  |     0.451M             |     0.41G    |
+|      net_s.levels.2.blocks.4.pos_embed                       |      (1, 256, 128)     |              |
+|      net_s.levels.2.blocks.4.mamba_att_blocks.0              |      0.386M            |      0.376G  |
+|      net_s.levels.2.blocks.4.finalconv11                     |      32.896K           |      33.554M |
+|     net_s.levels.2.blocks.5                                  |     0.451M             |     0.41G    |
+|      net_s.levels.2.blocks.5.pos_embed                       |      (1, 256, 128)     |              |
+|      net_s.levels.2.blocks.5.mamba_att_blocks.0              |      0.386M            |      0.376G  |
+|      net_s.levels.2.blocks.5.finalconv11                     |      32.896K           |      33.554M |
+|    net_s.levels.2.upsample.upsample                          |    0.525M              |    0.134G    |
+|     net_s.levels.2.upsample.upsample.0                       |     0.524M             |     0.134G   |
+|      net_s.levels.2.upsample.upsample.0.weight               |      (256, 128, 4, 4)  |              |
+|     net_s.levels.2.upsample.upsample.1                       |     0.256K             |     0.262M   |
+|      net_s.levels.2.upsample.upsample.1.weight               |      (128,)            |              |
+|      net_s.levels.2.upsample.upsample.1.bias                 |      (128,)            |              |
+|   net_s.levels.3                                             |   0.499M               |   1.372G     |
+|    net_s.levels.3.blocks                                     |    0.368M              |    1.237G    |
+|     net_s.levels.3.blocks.0                                  |     0.123M             |     0.412G   |
+|      net_s.levels.3.blocks.0.pos_embed                       |      (1, 256, 64)      |              |
+|      net_s.levels.3.blocks.0.mamba_att_blocks.0              |      98.048K           |      0.379G  |
+|      net_s.levels.3.blocks.0.finalconv11                     |      8.256K            |      33.554M |
+|     net_s.levels.3.blocks.1                                  |     0.123M             |     0.412G   |
+|      net_s.levels.3.blocks.1.pos_embed                       |      (1, 256, 64)      |              |
+|      net_s.levels.3.blocks.1.mamba_att_blocks.0              |      98.048K           |      0.379G  |
+|      net_s.levels.3.blocks.1.finalconv11                     |      8.256K            |      33.554M |
+|     net_s.levels.3.blocks.2                                  |     0.123M             |     0.412G   |
+|      net_s.levels.3.blocks.2.pos_embed                       |      (1, 256, 64)      |              |
+|      net_s.levels.3.blocks.2.mamba_att_blocks.0              |      98.048K           |      0.379G  |
+|      net_s.levels.3.blocks.2.finalconv11                     |      8.256K            |      33.554M |
+|    net_s.levels.3.upsample.upsample                          |    0.131M              |    0.135G    |
+|     net_s.levels.3.upsample.upsample.0                       |     0.131M             |     0.134G   |
+|      net_s.levels.3.upsample.upsample.0.weight               |      (128, 64, 4, 4)   |              |
+|     net_s.levels.3.upsample.upsample.1                       |     0.128K             |     0.524M   |
+|      net_s.levels.3.upsample.upsample.1.weight               |      (64,)             |              |
+|      net_s.levels.3.upsample.upsample.1.bias                 |      (64,)             |              |
+------------------------------------------------------------------------------
+2025-05-28 21:13:23,678 - ==> Creating optimizer
+2025-05-28 21:13:23,681 - ==> Loading dataset: DefaultAD
+2025-05-28 21:13:23,707 - ==> ********** cfg ********** 
+fvcore_is                            : True                                
+fvcore_b                             : 1                                   
+fvcore_c                             : 3                                   
+epoch_full                           : 500                                 
+metrics                              : ['mAUROC_sp_max', 'mAP_sp_max', 'mF1_max_sp_max', 'mAUPRO_px', 'mAUROC_px', 'mAP_px', 'mF1_max_px', 'mF1_px_0.2_0.8_0.1', 'mAcc_px_0.2_0.8_0.1', 'mIoU_px_0.2_0.8_0.1', 'mIoU_max_px']
+use_adeval                           : True                                
+evaluator.kwargs                     : {'metrics': ['mAUROC_sp_max', 'mAP_sp_max', 'mF1_max_sp_max', 'mAUPRO_px', 'mAUROC_px', 'mAP_px', 'mF1_max_px', 'mF1_px_0.2_0.8_0.1', 'mAcc_px_0.2_0.8_0.1', 'mIoU_px_0.2_0.8_0.1', 'mIoU_max_px'], 'pooling_ks': None, 'max_step_aupro': 100, 'use_adeval': True}
+vis                                  : False                               
+vis_dir                              : None                                
+optim.lr                             : 0.0005                              
+optim.kwargs                         : {'name': 'adamw'}                   
+trainer.name                         : TMADTrainer                         
+trainer.checkpoint                   : runs                                
+trainer.logdir_sub                   :                                     
+trainer.resume_dir                   :                                     
+trainer.cuda_deterministic           : False                               
+trainer.epoch_full                   : 500                                 
+trainer.scheduler_kwargs             : {'name': 'step', 'lr_noise': None, 'noise_pct': 0.67, 'noise_std': 1.0, 'noise_seed': 42, 'lr_min': 5e-06, 'warmup_lr': 5e-07, 'warmup_iters': -1, 'cooldown_iters': 0, 'warmup_epochs': 0, 'cooldown_epochs': 0, 'use_iters': True, 'patience_iters': 0, 'patience_epochs': 0, 'decay_iters': 0, 'decay_epochs': 400, 'cycle_decay': 0.1, 'decay_rate': 0.1}
+trainer.mixup_kwargs                 : {'mixup_alpha': 0.8, 'cutmix_alpha': 1.0, 'cutmix_minmax': None, 'prob': 0.0, 'switch_prob': 0.5, 'mode': 'batch', 'correct_lam': True, 'label_smoothing': 0.1}
+trainer.test_start_epoch             : 500                                 
+trainer.test_per_epoch               : 50                                  
+trainer.find_unused_parameters       : False                               
+trainer.sync_BN                      : apex                                
+trainer.dist_BN                      :                                     
+trainer.scaler                       : none                                
+trainer.data.batch_size              : 8                                   
+trainer.data.batch_size_per_gpu      : 8                                   
+trainer.data.batch_size_test         : 8                                   
+trainer.data.batch_size_per_gpu_test : 8                                   
+trainer.data.num_workers_per_gpu     : 4                                   
+trainer.data.drop_last               : True                                
+trainer.data.pin_memory              : True                                
+trainer.data.persistent_workers      : False                               
+trainer.data.num_workers             : 4                                   
+trainer.iter                         : 0                                   
+trainer.epoch                        : 0                                   
+trainer.iter_full                    : 226500                              
+trainer.metric_recorder              : {'mAUROC_sp_max_bottle': [], 'mAP_sp_max_bottle': [], 'mF1_max_sp_max_bottle': [], 'mAUPRO_px_bottle': [], 'mAUROC_px_bottle': [], 'mAP_px_bottle': [], 'mF1_max_px_bottle': [], 'mF1_px_0.2_0.8_0.1_bottle': [], 'mAcc_px_0.2_0.8_0.1_bottle': [], 'mIoU_px_0.2_0.8_0.1_bottle': [], 'mIoU_max_px_bottle': [], 'mAUROC_sp_max_cable': [], 'mAP_sp_max_cable': [], 'mF1_max_sp_max_cable': [], 'mAUPRO_px_cable': [], 'mAUROC_px_cable': [], 'mAP_px_cable': [], 'mF1_max_px_cable': [], 'mF1_px_0.2_0.8_0.1_cable': [], 'mAcc_px_0.2_0.8_0.1_cable': [], 'mIoU_px_0.2_0.8_0.1_cable': [], 'mIoU_max_px_cable': [], 'mAUROC_sp_max_capsule': [], 'mAP_sp_max_capsule': [], 'mF1_max_sp_max_capsule': [], 'mAUPRO_px_capsule': [], 'mAUROC_px_capsule': [], 'mAP_px_capsule': [], 'mF1_max_px_capsule': [], 'mF1_px_0.2_0.8_0.1_capsule': [], 'mAcc_px_0.2_0.8_0.1_capsule': [], 'mIoU_px_0.2_0.8_0.1_capsule': [], 'mIoU_max_px_capsule': [], 'mAUROC_sp_max_carpet': [], 'mAP_sp_max_carpet': [], 'mF1_max_sp_max_carpet': [], 'mAUPRO_px_carpet': [], 'mAUROC_px_carpet': [], 'mAP_px_carpet': [], 'mF1_max_px_carpet': [], 'mF1_px_0.2_0.8_0.1_carpet': [], 'mAcc_px_0.2_0.8_0.1_carpet': [], 'mIoU_px_0.2_0.8_0.1_carpet': [], 'mIoU_max_px_carpet': [], 'mAUROC_sp_max_grid': [], 'mAP_sp_max_grid': [], 'mF1_max_sp_max_grid': [], 'mAUPRO_px_grid': [], 'mAUROC_px_grid': [], 'mAP_px_grid': [], 'mF1_max_px_grid': [], 'mF1_px_0.2_0.8_0.1_grid': [], 'mAcc_px_0.2_0.8_0.1_grid': [], 'mIoU_px_0.2_0.8_0.1_grid': [], 'mIoU_max_px_grid': [], 'mAUROC_sp_max_hazelnut': [], 'mAP_sp_max_hazelnut': [], 'mF1_max_sp_max_hazelnut': [], 'mAUPRO_px_hazelnut': [], 'mAUROC_px_hazelnut': [], 'mAP_px_hazelnut': [], 'mF1_max_px_hazelnut': [], 'mF1_px_0.2_0.8_0.1_hazelnut': [], 'mAcc_px_0.2_0.8_0.1_hazelnut': [], 'mIoU_px_0.2_0.8_0.1_hazelnut': [], 'mIoU_max_px_hazelnut': [], 'mAUROC_sp_max_leather': [], 'mAP_sp_max_leather': [], 'mF1_max_sp_max_leather': [], 'mAUPRO_px_leather': [], 'mAUROC_px_leather': [], 'mAP_px_leather': [], 'mF1_max_px_leather': [], 'mF1_px_0.2_0.8_0.1_leather': [], 'mAcc_px_0.2_0.8_0.1_leather': [], 'mIoU_px_0.2_0.8_0.1_leather': [], 'mIoU_max_px_leather': [], 'mAUROC_sp_max_metal_nut': [], 'mAP_sp_max_metal_nut': [], 'mF1_max_sp_max_metal_nut': [], 'mAUPRO_px_metal_nut': [], 'mAUROC_px_metal_nut': [], 'mAP_px_metal_nut': [], 'mF1_max_px_metal_nut': [], 'mF1_px_0.2_0.8_0.1_metal_nut': [], 'mAcc_px_0.2_0.8_0.1_metal_nut': [], 'mIoU_px_0.2_0.8_0.1_metal_nut': [], 'mIoU_max_px_metal_nut': [], 'mAUROC_sp_max_pill': [], 'mAP_sp_max_pill': [], 'mF1_max_sp_max_pill': [], 'mAUPRO_px_pill': [], 'mAUROC_px_pill': [], 'mAP_px_pill': [], 'mF1_max_px_pill': [], 'mF1_px_0.2_0.8_0.1_pill': [], 'mAcc_px_0.2_0.8_0.1_pill': [], 'mIoU_px_0.2_0.8_0.1_pill': [], 'mIoU_max_px_pill': [], 'mAUROC_sp_max_screw': [], 'mAP_sp_max_screw': [], 'mF1_max_sp_max_screw': [], 'mAUPRO_px_screw': [], 'mAUROC_px_screw': [], 'mAP_px_screw': [], 'mF1_max_px_screw': [], 'mF1_px_0.2_0.8_0.1_screw': [], 'mAcc_px_0.2_0.8_0.1_screw': [], 'mIoU_px_0.2_0.8_0.1_screw': [], 'mIoU_max_px_screw': [], 'mAUROC_sp_max_tile': [], 'mAP_sp_max_tile': [], 'mF1_max_sp_max_tile': [], 'mAUPRO_px_tile': [], 'mAUROC_px_tile': [], 'mAP_px_tile': [], 'mF1_max_px_tile': [], 'mF1_px_0.2_0.8_0.1_tile': [], 'mAcc_px_0.2_0.8_0.1_tile': [], 'mIoU_px_0.2_0.8_0.1_tile': [], 'mIoU_max_px_tile': [], 'mAUROC_sp_max_toothbrush': [], 'mAP_sp_max_toothbrush': [], 'mF1_max_sp_max_toothbrush': [], 'mAUPRO_px_toothbrush': [], 'mAUROC_px_toothbrush': [], 'mAP_px_toothbrush': [], 'mF1_max_px_toothbrush': [], 'mF1_px_0.2_0.8_0.1_toothbrush': [], 'mAcc_px_0.2_0.8_0.1_toothbrush': [], 'mIoU_px_0.2_0.8_0.1_toothbrush': [], 'mIoU_max_px_toothbrush': [], 'mAUROC_sp_max_transistor': [], 'mAP_sp_max_transistor': [], 'mF1_max_sp_max_transistor': [], 'mAUPRO_px_transistor': [], 'mAUROC_px_transistor': [], 'mAP_px_transistor': [], 'mF1_max_px_transistor': [], 'mF1_px_0.2_0.8_0.1_transistor': [], 'mAcc_px_0.2_0.8_0.1_transistor': [], 'mIoU_px_0.2_0.8_0.1_transistor': [], 'mIoU_max_px_transistor': [], 'mAUROC_sp_max_wood': [], 'mAP_sp_max_wood': [], 'mF1_max_sp_max_wood': [], 'mAUPRO_px_wood': [], 'mAUROC_px_wood': [], 'mAP_px_wood': [], 'mF1_max_px_wood': [], 'mF1_px_0.2_0.8_0.1_wood': [], 'mAcc_px_0.2_0.8_0.1_wood': [], 'mIoU_px_0.2_0.8_0.1_wood': [], 'mIoU_max_px_wood': [], 'mAUROC_sp_max_zipper': [], 'mAUROC_sp_max_Avg': [], 'mAP_sp_max_zipper': [], 'mAP_sp_max_Avg': [], 'mF1_max_sp_max_zipper': [], 'mF1_max_sp_max_Avg': [], 'mAUPRO_px_zipper': [], 'mAUPRO_px_Avg': [], 'mAUROC_px_zipper': [], 'mAUROC_px_Avg': [], 'mAP_px_zipper': [], 'mAP_px_Avg': [], 'mF1_max_px_zipper': [], 'mF1_max_px_Avg': [], 'mF1_px_0.2_0.8_0.1_zipper': [], 'mF1_px_0.2_0.8_0.1_Avg': [], 'mAcc_px_0.2_0.8_0.1_zipper': [], 'mAcc_px_0.2_0.8_0.1_Avg': [], 'mIoU_px_0.2_0.8_0.1_zipper': [], 'mIoU_px_0.2_0.8_0.1_Avg': [], 'mIoU_max_px_zipper': [], 'mIoU_max_px_Avg': []}
+loss.loss_terms                      : [{'type': 'L2Loss', 'name': 'pixel', 'lam': 5.0}]
+loss.clip_grad                       : 5.0                                 
+loss.create_graph                    : False                               
+loss.retain_graph                    : False                               
+adv                                  : False                               
+logging.log_terms_train              : [{'name': 'batch_t', 'fmt': ':>5.3f', 'add_name': 'avg'}, {'name': 'data_t', 'fmt': ':>5.3f'}, {'name': 'optim_t', 'fmt': ':>5.3f'}, {'name': 'lr', 'fmt': ':>7.6f'}, {'name': 'pixel', 'suffixes': [''], 'fmt': ':>5.3f', 'add_name': 'avg'}]
+logging.log_terms_test               : [{'name': 'batch_t', 'fmt': ':>5.3f', 'add_name': 'avg'}, {'name': 'pixel', 'suffixes': [''], 'fmt': ':>5.3f', 'add_name': 'avg'}]
+logging.train_reset_log_per          : 50                                  
+logging.train_log_per                : 50                                  
+logging.test_log_per                 : 50                                  
+data.sampler                         : naive                               
+data.loader_type                     : pil                                 
+data.loader_type_target              : pil_L                               
+data.type                            : DefaultAD                           
+data.root                            : /home/tanpengjie1/Mazeqi/dataset/mvtec
+data.meta                            : meta.json                           
+data.cls_names                       : []                                  
+data.train_transforms                : [{'type': 'Resize', 'size': (256, 256), 'interpolation': <InterpolationMode.BILINEAR: 'bilinear'>}, {'type': 'CenterCrop', 'size': (256, 256)}, {'type': 'ToTensor'}, {'type': 'Normalize', 'mean': (0.485, 0.456, 0.406), 'std': (0.229, 0.224, 0.225), 'inplace': True}]
+data.test_transforms                 : [{'type': 'Resize', 'size': (256, 256), 'interpolation': <InterpolationMode.BILINEAR: 'bilinear'>}, {'type': 'CenterCrop', 'size': (256, 256)}, {'type': 'ToTensor'}, {'type': 'Normalize', 'mean': (0.485, 0.456, 0.406), 'std': (0.229, 0.224, 0.225), 'inplace': True}]
+data.target_transforms               : [{'type': 'Resize', 'size': (256, 256), 'interpolation': <InterpolationMode.BILINEAR: 'bilinear'>}, {'type': 'CenterCrop', 'size': (256, 256)}, {'type': 'ToTensor'}]
+data.anomaly_source_path             : data/dtd/images/                    
+data.resize_shape                    : [256, 256]                          
+data.use_sample                      : False                               
+data.views                           : []                                  
+data.train_size                      : 453                                 
+data.test_size                       : 216                                 
+data.train_length                    : 3629                                
+data.test_length                     : 1725                                
+model_t.name                         : timm_resnet34                       
+model_t.kwargs                       : {'pretrained': True, 'checkpoint_path': '', 'strict': False, 'features_only': True, 'out_indices': [1, 2, 3]}
+model_s                              : {'dims': [512, 256, 128, 64], 'depths': [3, 4, 6, 3], 'num_heads': [8, 8, 8, 8], 'window_size': [16, 16, 16, 16], 'scan_type': 'hilbertN8', 'att_mode': 'linear', 'mlp_ratio': 4}
+model.name                           : tmad                                
+model.kwargs                         : {'pretrained': False, 'checkpoint_path': '', 'strict': False, 'model_t': Namespace(name='timm_resnet34', kwargs={'pretrained': True, 'checkpoint_path': '', 'strict': False, 'features_only': True, 'out_indices': [1, 2, 3]}), 'model_s': {'dims': [512, 256, 128, 64], 'depths': [3, 4, 6, 3], 'num_heads': [8, 8, 8, 8], 'window_size': [16, 16, 16, 16], 'scan_type': 'hilbertN8', 'att_mode': 'linear', 'mlp_ratio': 4}}
+seed                                 : 42                                  
+size                                 : 256                                 
+warmup_epochs                        : 0                                   
+test_start_epoch                     : 500                                 
+test_per_epoch                       : 50                                  
+batch_train                          : 8                                   
+batch_test_per                       : 8                                   
+lr                                   : 0.0005                              
+weight_decay                         : 0.0001                              
+cfg_path                             : configs.tmad.tmad_256_500e_mvtec    
+mode                                 : train                               
+sleep                                : -1                                  
+memory                               : -1                                  
+dist_url                             : env://                              
+logger_rank                          : 0                                   
+opts                                 : []                                  
+command                              : python3 -m torch.distributed.launch --nproc_per_node=$nproc_per_node --nnodes=$nnodes --node_rank=$node_rank --master_addr=$master_addr --master_port=$master_port --use_env run.py -c configs.tmad.tmad_256_500e_mvtec -m train --sleep -1 --memory -1 --dist_url env:// --logger_rank 0 
+task_start_time                      : 7381437.349922167                   
+dist                                 : False                               
+world_size                           : 1                                   
+rank                                 : 0                                   
+local_rank                           : 0                                   
+ngpus_per_node                       : 1                                   
+nnodes                               : 1                                   
+master                               : True                                
+logdir                               : runs/TMADTrainer_configs_tmad_tmad_256_500e_mvtec_20250528-211318
+logger.filters                       : []                                  
+logger.name                          : root                                
+logger.level                         : 20                                  
+logger.parent                        : None                                
+logger.propagate                     : True                                
+logger.disabled                      : False                               
+logdir_train                         : runs/TMADTrainer_configs_tmad_tmad_256_500e_mvtec_20250528-211318/show_train
+logdir_test                          : runs/TMADTrainer_configs_tmad_tmad_256_500e_mvtec_20250528-211318/show_test
+2025-05-28 21:13:23,707 - ==> Starting training with 1 nodes x 1 GPUs
+2025-05-28 21:13:38,504 - Train: 0.02% [50/226500]  [0.1/500.0] [batch_t 0.274 (0.294)] [data_t 0.001] [optim_t 0.274] [lr 0.000500] [pixel 91.265 (1465.632)]

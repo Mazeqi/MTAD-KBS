@@ -1,0 +1,6 @@
+2025-05-28 21:12:01,625 - ==> Logging on master GPU: 0
+2025-05-28 21:12:01,625 - ==> Running Trainer: TMADTrainer
+2025-05-28 21:12:01,625 - ==> Using GPU: [0] for Training
+2025-05-28 21:12:01,625 - ==> Building model
+2025-05-28 21:12:01,878 - Loading pretrained weights from Hugging Face hub (timm/resnet34.a1_in1k)
+2025-05-28 21:12:02,137 - [timm/resnet34.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
